@@ -1,0 +1,36 @@
+{
+  "name": "graphql-federation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-gateway": "nodemon src/gateway.js",
+    "start-service-accounts": "nodemon src/services/accounts/index.js",
+    "start-service-reviews": "nodemon src/services/reviews/index.js",
+    "start-service-products": "nodemon src/services/products/index.js",
+    "start-service-inventory": "nodemon src/services/inventory/index.js",
+    "start-services": "concurrently \"npm:start-service-*\"",
+    "postinstall": "lerna bootstrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lcmkey/graphql-federation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lcmkey/graphql-federation/issues"
+  },
+  "homepage": "https://github.com/Lcmkey/graphql-federation#readme",
+  "devDependencies": {
+    "lerna": "latest",
+    "nodemon": "latest",
+    "concurrently": "latest"
+  },
+  "dependencies": {
+    "@apollo/gateway": "latest",
+    "apollo-server": "latest",
+    "graphql": "latest"
+  }
+}
